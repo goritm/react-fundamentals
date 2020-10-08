@@ -36,8 +36,7 @@ function App() {
       </button>
       <ul style={{listStyle: 'none', paddingLeft: 0}}>
         {items.map(item => (
-          // 🐨 add a key prop to the <li> below. Set it to item.id
-          <li>
+          <li key={item.id}>
             <button onClick={() => removeItem(item)}>remove</button>{' '}
             <label htmlFor={`${item.value}-input`}>{item.value}</label>{' '}
             <input id={`${item.value}-input`} defaultValue={item.value} />
